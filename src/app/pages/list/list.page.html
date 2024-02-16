@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>list</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6" size-md="4" size-lg="3" *ngFor="let character of characters">
+        <ion-card [routerLink]="[character.id]">
+          <ion-card-header>
+          <ion-img  [src]=" 'https://genshin.jmp.blue/characters/' + character.id + '/icon-big' " alt="{{ character.name }}"></ion-img>
+            <ion-card-title>{{ character.name }}</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>
+
+
+
