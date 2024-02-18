@@ -1,22 +1,23 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>{{character?.name}}</ion-title>
+    <ion-title>{{character?.name}} - {{character?.title}}</ion-title>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="tabs/list"></ion-back-button>
     </ion-buttons>
+
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-card>
-    <ion-img [src]=" 'https://genshin.jmp.blue/characters/' + id + '/portrait' "></ion-img>
+    <ion-img [src]=" imageUrl + id + '/portrait' "></ion-img>
     <ion-card-header>
-      <ion-card-title>{{character?.name}}</ion-card-title>
-      <ion-card-subtitle>{{character?.vision}}</ion-card-subtitle>
+      <ion-card-title>{{character?.name}} - {{character?.title}}</ion-card-title>
+      <ion-card-subtitle>Elément : {{character?.vision}}</ion-card-subtitle>
     </ion-card-header>
 
     <ion-card-content>
-      <ion-card-title>Rarity</ion-card-title>
+      <ion-card-title>Rareté</ion-card-title>
       <ion-card-subtitle>{{character?.rarity}}</ion-card-subtitle>
     </ion-card-content>
   </ion-card>
@@ -29,6 +30,19 @@
     <ion-card-content>
       <ion-card-subtitle> {{character?.constellation}}</ion-card-subtitle>
     </ion-card-content>
+
   </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Arme utilisée</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-card-subtitle> {{character?.weapon}}</ion-card-subtitle>
+    </ion-card-content>
+
+  </ion-card>
+
 
 </ion-content>

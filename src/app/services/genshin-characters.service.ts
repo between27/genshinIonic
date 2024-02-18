@@ -20,6 +20,6 @@ export class GenshinCharactersService {
   }
 
   showCharacter(id: string | null){
-    return this.http.get(`https://genshin.jmp.blue/characters/${id}`)
+    return this.http.get(`https://genshin.jmp.blue/characters/${id}?lang=fr`)
 }
 }

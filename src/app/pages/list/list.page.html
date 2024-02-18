@@ -10,7 +10,7 @@
       <ion-col size="6" size-md="4" size-lg="3" *ngFor="let character of characters">
         <ion-card [routerLink]="[character.id]">
           <ion-card-header>
-          <ion-img  [src]=" 'https://genshin.jmp.blue/characters/' + character.id + '/icon-big' " alt="{{ character.name }}"></ion-img>
+          <ion-img class="card-image"  [src]=" 'https://genshin.jmp.blue/characters/' + character.id + '/icon-big' " alt="{{ character.name }}"></ion-img>
             <ion-card-title>{{ character.name }}</ion-card-title>
           </ion-card-header>
         </ion-card>

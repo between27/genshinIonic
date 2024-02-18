@@ -10,6 +10,7 @@ import {GenshinCharactersService} from "../services/genshin-characters.service";
 export class ShowPage implements OnInit {
 character : any
   id: string | null = this.route.snapshot.paramMap.get('id')
+  imageUrl = 'https://genshin.jmp.blue/characters/'
   constructor(private route: ActivatedRoute, private genshinCharactersService : GenshinCharactersService) { }
 
   ngOnInit() {
